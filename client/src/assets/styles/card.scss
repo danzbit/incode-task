@@ -1,0 +1,50 @@
+.card__container {
+    cursor: pointer;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    .card__item {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .card__item:nth-child(1) {
+      p {
+        font-weight: bold;
+      }
+    }
+
+    .card__item:nth-child(2n) {
+      margin-top: 8px;
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .card__icons {
+      cursor: pointer;
+      margin-top: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      svg:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .card__container-last {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 48px;
+      text-align: center;
+    }
+}
+  

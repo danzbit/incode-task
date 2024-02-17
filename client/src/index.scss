@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+figure,
+figcaption,
+blockquote,
+fieldset,
+legend,
+button,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+a img {
+  border: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+abbr,
+code,
+kbd,
+samp {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+small {
+  font-size: 80%;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: none;
+  cursor: help;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  cursor: pointer;
+}
