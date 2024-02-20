@@ -1,18 +1,28 @@
-import { ReactElement, useState } from 'react'
-import LoadInput from '../../components/Input/LoadInput'
-import BoardList from '../../components/List/BoardList'
-import '../../assets/styles/search.scss'
+import { ReactElement, useEffect, useState } from 'react'
+import BoardList from '../../components/BoardComponents/List/BoardList'
+import NavBar from '../../components/NavBar/NavBar';
+import { Board } from '../../types/board';
+import { useBoardsQuery } from '../../hooks/cards';
 
 function Dashboard(): ReactElement {
   const [boardId, setBoardId] = useState<string>('');
+  const [boards, setBoards] = useState<Board[] | null>([])
+
+  const { data } = useBoardsQuery();
+
+  useEffect(() => {
+    if (data) {
+      setBoards(data);
+    }
+  }, [data]);
+
+  const filteredBoards = boardId ? boards?.filter((board: Board) => board._id === boardId) : boards;
 
   return (
     <div>
-      <div className='search__container'>
-        <LoadInput value={boardId} onChange={(e) => setBoardId(e.target.value)}/>
-      </div>
+      <NavBar setBoardId={setBoardId} boardId={boardId} />
       <div className='boards__container'>
-        <BoardList boardId={boardId}/>
+        <BoardList filteredBoards={filteredBoards} />
       </div>
     </div>
   )

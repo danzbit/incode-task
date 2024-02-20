@@ -1,9 +1,5 @@
 import { ReactElement } from 'react'
-
-type LoadInputProps = {
-  value: string,
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void 
-}
+import { LoadInputProps } from './types'
 
 function LoadInput({ value, onChange }: LoadInputProps): ReactElement {
   return (
