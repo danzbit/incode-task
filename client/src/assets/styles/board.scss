@@ -2,6 +2,17 @@
   
   .board__container {
     margin-top: 20px;
+
+    .board__navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        padding: 10px 5px;
+        font-size: 18px;
+      }
+    }
   
     .board__title {
       font-size: 24px;
@@ -9,7 +20,6 @@
     }
 
     .board__cards {
-      
       margin-top: 50px;
       display: flex;
       justify-content: space-between;

@@ -39,3 +39,24 @@ export async function createBoard(name: string): Promise<Board | null> {
     return null;
   }
 }
+
+export async function deleteBoard(id?: string): Promise<Board | null> {
+  try {
+    const res = await fetch(`${BOARD_ROUTE}/${id}`, {
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    if (!res.ok) {
+      throw new Error('Failed to delete board');
+    }
+
+    return res.json()
+  }
+  catch (err: any) {
+    error(err.message);
+    return null;
+  }
+}
